@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Content Designer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'IBM Plex Sans', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .geometric-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 2rem;
+        }
+        .geometric-shape {
+            position: absolute;
+            background-color: #0f62fe;
+            transition: all 0.5s ease;
+        }
+        .square {
+            width: 100px;
+            height: 100px;
+            top: 100px;
+            left: 100px;
+        }
+        .circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            top: 90px;
+            left: 90px;
+            opacity: 0;
+        }
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+            border-bottom: 121px solid #0f62fe;
+            background-color: transparent;
+            top: 90px;
+            left: 80px;
+            opacity: 0;
+        }
+        .geometric-container:hover .square {
+            transform: rotate(45deg);
+            opacity: 0;
+        }
+        .geometric-container:hover .circle {
+            opacity: 1;
+        }
+        .geometric-container:hover .triangle {
+            opacity: 1;
+            transform: rotate(180deg);
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0f62fe;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #0353e9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="geometric-container">
+            <div class="geometric-shape square"></div>
+            <div class="geometric-shape circle"></div>
+            <div class="geometric-shape triangle"></div>
+        </div>
+        <h1>Your Name</h1>
+        <p>Content Designer with 10 Years of Experience</p>
+        <a href="projects.html" class="cta-button">View My Projects</a>
+    </div>
+</body>
+</html>
